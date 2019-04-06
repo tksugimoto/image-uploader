@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  minio:
+    image: minio/minio
+    command: minio server /data
+    tty: true
+    ports:
+      - "${MINIO_SERVER_BIND_IP_PORT:-127.0.0.1:9000}:9000"
+    environment:
+      - MINIO_ACCESS_KEY
+      - MINIO_SECRET_KEY
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10mb"
+        max-file: "3"
