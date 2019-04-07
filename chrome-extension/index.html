@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>Image Uploader</title>
+	<style>
+		body {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		.settings label {
+			display: block;
+			padding: 10px;
+		}
+		#input {
+			width: 100%;
+			height: 100px;
+		}
+		#preview img {
+			max-width: 100%;
+			border: 2px solid gray;
+		}
+	</style>
+</head>
+<body>
+	<h1>
+		設定
+	</h1>
+	<div class="settings">
+		<label>エンドポイント
+			<input class="setting" id="endpoint" placeholder="http://127.0.0.1:9000">
+		</label>
+		<label>ユーザー名
+			<input class="setting" id="user-name">
+		</label>
+		<label>シークレットアクセスキー
+			<input class="setting" id="secret-access-key" type="password">
+		</label>
+	</div>
+	<h1>
+		Image Uploaderテスト
+	</h1>
+	<textarea id="input" placeholder="ここに画像をペースト"></textarea>
+	<div id="preview"></div>
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+	<script src="./main.js"></script>
+</body>
+</html>

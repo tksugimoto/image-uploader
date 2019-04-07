@@ -1,0 +1,10 @@
+﻿{
+	"name": "Image Uploader",
+	"version": "0.1.0",
+	"manifest_version": 2,
+	"content_security_policy": "script-src 'self' https://sdk.amazonaws.com; object-src 'self'",
+	"permissions": [
+		"storage"
+	],
+	"options_page": "index.html"
+}
